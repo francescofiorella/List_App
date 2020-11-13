@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ResourceBundle;
@@ -23,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
         // collegamento lista e arrays
         myListView = (ListView)findViewById(R.id.myListView);
         items = res.getStringArray(R.array.items);
+
+        // metti gli elementi di items nella lista
+        myListView.setAdapter(new ArrayAdapter<String>(this, R.layout.my_listview_detail, items));
 
     }
 }
