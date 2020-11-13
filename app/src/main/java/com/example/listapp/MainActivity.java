@@ -29,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
         prices = res.getStringArray(R.array.prices);
         descriptions = res.getStringArray(R.array.descriptions);
 
-
+        ItemAdapter itemAdapter = new ItemAdapter(this, items, prices, descriptions);
+        myListView.setAdapter(itemAdapter);
 
     }
 }
