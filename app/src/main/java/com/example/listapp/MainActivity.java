@@ -14,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
     // definizione lista e arrays
     ListView myListView;
     String[] items;
+    String[] prices;
+    String[] descriptions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
         // collegamento lista e arrays
         myListView = (ListView)findViewById(R.id.myListView);
         items = res.getStringArray(R.array.items);
+        prices = res.getStringArray(R.array.prices);
+        descriptions = res.getStringArray(R.array.descriptions);
+
 
 
     }
